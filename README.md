@@ -1,2 +1,2 @@
-# canvas-images
+# canvas-starter
 Created with CodeSandbox

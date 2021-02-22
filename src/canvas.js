@@ -8,11 +8,13 @@ const Canvas = (props) => {
     const context = canvas.getContext("2d");
     let animationFrameId;
 
-    const { canvasWidth, canvasHeight } = canvas.getBoundingClientRect();
+    const { width, height, ...rest } = canvas.getBoundingClientRect();
+
+    console.log(width, height);
     const draw = (context) => {
       var img = new Image(); // Create new img element
       img.src = "7debaf0c-a396-4a57-a000-b1e418c4cb7c.png"; // Set source path
-      context.drawImage(img, 0, 0, canvasWidth, canvasHeight);
+      context.drawImage(img, width / 4, height / 4, width / 2, height / 2);
     };
     //Our draw came here
     const render = () => {
